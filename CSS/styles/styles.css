@@ -10,10 +10,13 @@
    
 }
 :root {
-    --bg-color:#1f1f1f;
-    --second-bg-color:#323946;
+    --bg-color:#021024;
+    --second-bg-color:#052659;
+    --third-bg-color:#5483b3;
+    --fourth-bg-color:#7DA0C4;
     --text-color:#fff;
     --main-color:#0ef;
+    --text-box:#C1E8FF;
 }
 
 html {
@@ -72,6 +75,8 @@ span {
 .heading {
     text-align: center;
     font-size: 4.5rem;
+    top:0;
+    margin-bottom: 20px;
 }
 
 .home {
@@ -109,11 +114,11 @@ span {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: var(--second-bg-color);
+    background: var(--third-bg-color);
 
 }
 .about-img img {
-    width: 35vw;
+    width: 30vw;
         
 }
 
@@ -131,7 +136,7 @@ span {
 }
 
 #table {
-    background: var(--second-bg-color);
+    background: var(--fourth-bg-color);
 }
 
 table {
@@ -155,9 +160,73 @@ th, td {
 }
 
 th {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
+    background: var(--bg-color);
+    color: var(--main-color);
 }
+.container {
+    border-radius: 5px;
+    background: var(--bg-color);
+    padding: 20px;
+  }
+  
+
+form p {
+    color: var(--main-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#feedback {
+    width: 50%;
+    height: 150px;
+    padding: .5rem 1.8rem;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius:2rem;
+    background: var(--text-color);
+    resize: none;  
+      
+}
+input[type=text], select, 
+input[type=email] {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 10px;
+    border-radius: 2rem;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+button {
+    background: var(--text-color);
+    color:var(--text-color);
+    font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 3rem;
+    border: 0;
+    border-radius: 3rem;
+    background: var(--third-bg-color);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    float: left;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background: var(--main-color);
+  }
 
 footer {
     background: var(--second-bg-color);
@@ -167,3 +236,20 @@ footer {
     margin-top: 20px;
     font-weight: bold;
 } 
+
+  ::placeholder {
+    font-family: 'Quicksand', sans-serif;
+	font-weight: 600;
+    font-size: 1.1rem;
+    color: #838788;
+    position: relative;
+    left: 0;
+  }
+		
+  .col-1 {
+    color: #57565c;
+    height: 1.3rem;
+    position: absolute;
+    left: 1.5rem;
+    top: 1.1rem;
+  }
