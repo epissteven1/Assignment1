@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 4px 2px 5px 10px lightblue;
+}
+main {
+    margin: 100px;
+    width: 600px; 
+    margin-left: 30%;
+    
+}
+h1 {
+    background:#2f2ff6;
+    color: aliceblue;
+    
+
+    
+}
+
+form > label {
+    background: #1E90FF;
+    float: right;
+    text-align:center;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-end-end-radius: 10px ;
+    cursor: pointer;
+    
+
+}
+.add {
+    width:400px;
+    padding: 0 20px;
+    padding:10px;
+}
+.task1,.task2, .task3, h1 {
+    width: 400px;
+    padding: 10px 60px;
+    margin: 10px;
+    text-align:center;
+    
+
+}
+.task1,.task2, .task3, .add, h1 {
+    border:2px solid #DCDCDC;
+    border-radius: 10px; 
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.task1  {
+    background:#AFEEEE;
+    margin-top: 10px;
+    
+}
+.task2 {
+    background:#8FBC8F;
+    text-decoration-line: line-through
+}
+.task3 {
+    background:#AFEEEE ;
+    margin-bottom: 40px;
+}

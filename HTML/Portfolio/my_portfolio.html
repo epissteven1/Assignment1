@@ -1,130 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
 
-    <header>
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="nav">
-            <a href="#home">Home</a>
-            <a href="#aboutme">About Me</a>
-            <a href="#table">My Project</a>
-            <a href="#contactme">Contact Me</a>
-        </nav>
-    </header>
-    <section>
-        <h3>Hello, I am</h3>
-        <h1>Steven Epis</h1>
-        <h3>And I'm in currently</h3>
-        <h3>On-The-Job Training at <span>ARMADA LOGICS</span></h3>
-        <p>I am a passionate developer working on innovative projects. I am willing to learn more about programming.
-        </p>
+<header>
+    <a href="#" class="logo">Portfolio</a>
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#aboutme">About Me</a>
+        <a href="#table">My Project</a>
+        <a href="#contactme">Contact Me</a>
+    </nav>
+</header>
+<section>
+    <h3>Hello, I am</h3>
+    <h1>Steven Epis</h1>
+    <h3>And I'm in currently</h3>
+    <h3>On-The-Job Training at <span>ARMADA LOGICS</span></h3>
+    <p>I am a passionate developer working on innovative projects. I am willing to learn more about programming.
+    </p>
 
-    </section>
+</section>
 
-    <section>
-        <img src="../images/steven.jpg" alt="My Profile Picture">
-        <h2>About Me</h2>
-        <h3>On-The-Job Training</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptas repellendus quo quasi minus dicta
-            aspernatur optio! Asperiores voluptates nemo culpa blanditiis magni saepe. Quo dolorem quas assumenda
-            ab!</p>
+<section>
+    <img src="../images/steven.jpg" alt="My Profile Picture">
+    <h2>About Me</h2>
+    <h3>On-The-Job Training</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptas repellendus quo quasi minus dicta
+        aspernatur optio! Asperiores voluptates nemo culpa blanditiis magni saepe. Quo dolorem quas assumenda
+        ab!</p>
 
-    </section>
+</section>
 
-  
-        <h4>My Projects</h4>
-        <table>
-            <thead>
-               
-                <tr>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Year</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>FBVRS</td>
-                    <td>Uses machine learning to convert spoken Filipino syllables into Baybayin script.</td>
-                    <td>2024-2025</td>
-                </tr>
-                <tr>
-                    <td>Attendance System using Fingerprint Sensor</td>
-                    <td>A system that uses fingerprint biometrics to record and monitor student attendance.</td>
-                    <td>2023-2024</td>
-                </tr>
-            </tbody>
-        </table>
-   
+
+<h4>My Projects</h4>
+<table>
+    <thead>
+
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>FBVRS</td>
+            <td>Uses machine learning to convert spoken Filipino syllables into Baybayin script.</td>
+            <td>2024-2025</td>
+        </tr>
+        <tr>
+            <td>Attendance System using Fingerprint Sensor</td>
+            <td>A system that uses fingerprint biometrics to record and monitor student attendance.</td>
+            <td>2023-2024</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<form action="#" id="contactme" method="POST">
+    <h4>Contact Me</h4>
+    <div>
+        <label for="username">Full Name:</label>
+        <input type="text" id="username" name="username">
+    </div>
+    <div>
+        <label for="email">Email Address: </label>
+        <input type="email" id="email" name="email">
+    </div>
+
+    <br>
+    <fieldset>
+        <legend>How did you hear about this portfolio?</legend>
+        <div>
+            <input type="radio" id="friend" name="aboutme" value="friend">
+            <label for="friend">Friend</label>
+        </div>
+        <div>
+            <input type="radio" id="socialmedia" name="aboutme" value="socialmedia">
+            <label for="socialmedia">Social Media</label>
+        </div>
+        <div>
+            <input type="radio" id="searchengine" name="aboutme" value="searchengine">
+            <label for="searchengine">Search Engine</label>
+        </div>
+        <div>
+            <input type="radio" id="other" name="aboutme" value="other">
+            <label for="other">Other</label>
+        </div>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Skills/Interests</legend>
+        <div>
+            <input type="checkbox" id="webdev" name="skills" value="webdev">
+            <label for="webdev">Web Development</label>
+        </div>
+        <div>
+            <input type="checkbox" id="android" name="skills" value="android">
+            <label for="android">Android Development</label>
+        </div>
+        <div>
+            <input type="checkbox" id="ml" name="skills" value="ml">
+            <label for="ml">Machine Learning Development</label>
+        </div>
         <br>
-    <form action="#" id="contactme" method="POST">
-       
-            <h4>Contact Me</h4>
-            <div>
-                <label for="username">Full Name:</label>
-                <input type="text" id="username" name="username">
-            </div>
-            <div>
-                <label for="email">Email Address: </label>
-                <input type="email" id="email" name="email">
-            </div>
-       
-        <br>
-        <fieldset>
-
-            <legend>How did you hear about this portfolio?</legend>
-
-            <div>
-                <input type="radio" id="friend" name="aboutme" value="friend">
-                <label for="friend">Friend</label>
-            </div>
-            <div>
-                <input type="radio" id="socialmedia" name="aboutme" value="socialmedia">
-                <label for="socialmedia">Social Media</label>
-            </div>
-            <div>
-                <input type="radio" id="searchengine" name="aboutme" value="searchengine">
-                <label for="searchengine">Search Engine</label>
-            </div>
-            <div>
-                <input type="radio" id="other" name="aboutme" value="other">
-                <label for="other">Other</label>
-            </div>
-        </fieldset>
-        <br>
-        <fieldset>
-            <legend>Skills/Interests</legend>
-            <div>
-                <input type="checkbox" id="webdev" name="skills" value="webdev">
-                <label for="webdev">Web Development</label>
-            </div>
-            <div>
-                <input type="checkbox" id="android" name="skills" value="android">
-                <label for="android">Android Development</label>
-            </div>
-            <div>
-                <input type="checkbox" id="ml" name="skills" value="ml">
-                <label for="ml">Machine Learning Development</label>
-            </div>
+        <div>
+            <label for="feedback">Comments or Message:</label>
             <br>
-            <div>
-                <label for="feedback">Comments or Message:</label>
-                <br>
-                <textarea id="feedback" name="feedback"></textarea>
-            </div>
+            <textarea id="feedback" name="feedback"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </fieldset>
+</form>
+<footer>
+    <p>&copy; StevenEpis2025</p>
+</footer>
+</body>
 
-
-            <button type="submit">Submit</button>
-        </fieldset>
-    </form>
-
-    <footer>
-        <p>&copy; StevenEpis2025</p>
-    </footer>
-    </body>
-    </html>
+</html>
