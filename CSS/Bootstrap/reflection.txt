@@ -1,0 +1,4 @@
+This assignment is challenge me especially in using only css in styling, I do research in what approach I will to to make this layout alike.
+It takes me 6 hours to finish this assignment. I encountered I lot of problem in displayin the content and adjusting the position of a element.
+So in the first place I make a plan for the layout like lego concept I separate every container.Overall I gain experience in doing this without help of AI.
+I dont know if I followed the good practive of html if their's room for improvement I will do it to enhance my skills in programming. That's all I like you to make a feedback in my spagcode hehe.

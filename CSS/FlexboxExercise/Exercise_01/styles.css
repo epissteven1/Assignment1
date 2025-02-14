@@ -1,13 +1,9 @@
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto;
   }
   
   header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #ffcc00;
     height: 150px;
     padding: 10px;
@@ -23,11 +19,9 @@ body {
   aside {
     display: flex;
     background-color: #9b59b6;
-    height: 320px;
     flex: 0 0 300px;
-    justify-content: center;
-    align-items: center;
-    max-width: 30%;
+    background-color: #9b59b6;
+    height: 300px;
     margin-right: 20px;
   }
   
@@ -37,7 +31,6 @@ body {
     flex-direction: column;
     background-color: #1abc9c;
     height: 300px;
-    padding: 10px;
   }
   
   footer {
@@ -45,8 +38,5 @@ body {
     height: 100px;
     padding: 30px;
     margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
