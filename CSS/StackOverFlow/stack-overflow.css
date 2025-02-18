@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(239, 226, 226);
+    margin-right: 50px;
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+    margin-left: 140px;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 15px;
+    padding: 10px 12px;
+    list-style: none;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+input[type=search] {
+    padding: 0 8px;
+    width: 250px;
+    height: 38px;
+    border: 1px solid #070505d9;
+    border-radius: 8px;
+}
+
+.btn-login,
+.btn-signin {
+    height: 38px;
+    width: 70px;
+    border: 2px solid #1B75D0;
+    border-radius: 10px;
+}
+
+.btn-login {
+    color: #1B75D0;
+}
+
+.btn-signin {
+    color: white;
+    background: #1B75D0;
+}
+
+main {
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    flex-shrink: 0;
+    padding: 20px;
+
+}
+
+.sidebar ul {
+    list-style: none;
+
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar li,
+.sidebar h1 {
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+.sidebar h1 {
+    margin-top: 50px;
+
+}
+
+.btn-home {
+    background-image: url('./images/icons/home.png');
+}
+
+.btn-question {
+    background-image: url('./images/icons/questions.png');
+}
+
+.btn-tags {
+    background-image: url('./images/icons/tags.png');
+}
+
+.btn-user {
+    background-image: url('./images/icons/users.png');
+    margin-top: 50px;
+}
+
+.btn-companies {
+    background-image: url('./images/icons/companies.png');
+
+}
+
+.btn-discussion {
+    background-image: url('./images/icons/discussions.png');
+    margin-top: 10px;
+}
+
+.nav-links {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+
+}
+
+.content-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 20px 40px;
+}
+
+.sub-container span {
+    color: aliceblue;
+    background-image: url('./images/background-image.png');
+    background-size: contain;
+}
+
+.sub-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: whitesmoke;
+    padding: 40px;
+    border-radius: 10px;
+    height: 60vh;
+}
+
+.sub-container h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-right: 100px;
+}
+
+.sub-container p {
+    margin-right: 10px;
+    margin-bottom: 70px;
+}
+
+.sign-up {
+    color: white;
+    background: #1B75D0;
+    height: 38px;
+    width: 100px;
+    border: 2px solid #1B75D0;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.visit {
+    color: #1B75D0;
+    text-decoration: none;
+}
+
+.visit:hover {
+    color: inherit;
+}
+
+.image-container img {
+    position: relative;
+    width: 550px;
+    height: 350px;
+}
+
+.team,
+.advertise,
+.gen-tools,
+.career {
+    margin-top: 40px;
+}
+.team {
+    position: relative;
+}
+
+.team h1,
+.career h1 {  
+    color: rgb(90, 89, 88);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.team-content img,
+.gen-content img,
+.advertise-content img,
+.career-content img {
+    width: 30px;
+    height: 30px;
+}
+
+.team-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background: whitesmoke;
+    padding: 40px;
+    border-radius: 10px;
+    
+}
+
+.team-content span {
+    color: #0c0d0e;
+    font-weight:bold;
+    padding: 10px;
+    font-size: 30px ;
+}
+.team-content h3 {
+    margin-bottom: 50px;
+    color: #e7700d;
+    margin: 0 0 20px 28px;
+}
+.team-content h2, p {
+    width: 500px;
+    
+}
+
+.gen-content a,
+.team-content a,
+.advertise-content a,
+.career-content a {
+    text-decoration: none;
+}
+
+.gen-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    background: rgb(55, 55, 55);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.advertise-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    background: whitesmoke;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.career-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: whitesmoke;
+    padding: 40px;
+    border-radius: 10px;
+}

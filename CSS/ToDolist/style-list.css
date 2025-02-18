@@ -52,6 +52,7 @@ form > label {
 .task1,.task2, .task3, .add, h1 {
     border:2px solid #DCDCDC;
     border-radius: 10px; 
+    list-style: none;
 }
 
 .task {
