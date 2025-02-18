@@ -62,6 +62,7 @@ input[type=search] {
 main {
     display: flex;
     position: relative;
+
 }
 
 .sidebar {
@@ -78,7 +79,6 @@ main {
 }
 
 .sidebar a {
-    text-decoration: none;
     color: black;
 }
 
@@ -158,13 +158,11 @@ main {
 .sub-container h1 {
     font-size: 1.8rem;
     font-weight: 400;
-    margin-bottom: 20px;
-    margin-right: 100px;
+    margin:0 100px 20px 0;
 }
 
 .sub-container p {
-    margin-right: 10px;
-    margin-bottom: 70px;
+    margin: 0 10px 70px 0 ;
 }
 
 .sign-up {
@@ -179,7 +177,7 @@ main {
 
 .visit {
     color: #1B75D0;
-    text-decoration: none;
+   
 }
 
 .visit:hover {
@@ -194,61 +192,138 @@ main {
 
 .team,
 .advertise,
-.gen-tools,
-.career {
+.gen-tools {
     margin-top: 40px;
 }
+
 .team {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-.team h1,
-.career h1 {  
+.team h1 {
     color: rgb(90, 89, 88);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 30px;
+
 }
 
-.team-content img,
-.gen-content img,
-.advertise-content img,
-.career-content img {
+.team-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: whitesmoke;
+    border-radius: 10px;
+    height: 40vh;
+}
+
+.team-text,
+.gen-team {
+    flex: 1;
+    max-width: 55%;
+    padding-right: 20px;
+    margin-left: 40px;
+}
+
+.team-text .team-logo,
+.gen-team .gen-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ /* logo size try to use all selector here same attribute */
+.team-text img,
+.gen-team img {
     width: 30px;
     height: 30px;
 }
 
-.team-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    background: whitesmoke;
-    padding: 40px;
-    border-radius: 10px;
-    
+
+.team-text h3 {
+    color: #e7700d;
+    margin: -12px 0px 20px 40px;
+
+}
+
+.advertise h3 {
+    color: #e7700d;
+    margin: -57px 0px 10px 40px;
+}
+
+.team-text h3,
+.advertise h3 {
+    font-size: 18px;
+}
+
+.team-text p {
+    max-width: 580px;
+    margin-bottom: 50px;
+
+}
+
+.team-text a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #030303;
 }
 
 .team-content span {
-    color: #0c0d0e;
-    font-weight:bold;
-    padding: 10px;
-    font-size: 30px ;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: black;
 }
-.team-content h3 {
-    margin-bottom: 50px;
-    color: #e7700d;
-    margin: 0 0 20px 28px;
+
+.explore-teams {
+    color: white;
+    background: #1B75D0;
+    height: 38px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.team-content h2, p {
-    width: 500px;
-    
+
+.team-text .try-for-free {
+    color: #1B75D0;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.home-teams {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.home-teams img {
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
 }
 
 .gen-content a,
 .team-content a,
-.advertise-content a,
-.career-content a {
+.advertise .advertise-logo,
+.advertise .api-logo,
+.advertise .advertise-solution,
+.advertise .api-solution,
+.career-text .career-logo,
+.sidebar a,
+.team-text a,
+.visit,
+.gen-team a,
+.career-text .career-link {
     text-decoration: none;
+}
+
+.gen-tools {
+    position: relative;
+    display: flex;
+    width: 100%;
 }
 
 .gen-content {
@@ -257,26 +332,254 @@ main {
     justify-content: space-between;
     align-items: end;
     background: rgb(55, 55, 55);
-    padding: 40px;
     border-radius: 10px;
 }
 
-.advertise-content {
-    position: relative;
+.gen-team {
     display: flex;
-    justify-content: space-between;
-    align-items: end;
-    background: whitesmoke;
-    padding: 40px;
-    border-radius: 10px;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-right: 40px;
 }
 
-.career-content {
-    position: relative;
+.gen-team .gen-logo {
+    gap: 10px;
+    flex-direction: row;
+}
+
+.gen-logo a {
+    color: whitesmoke;
+}
+
+.gen-team span {
+    color: rgb(61, 60, 60);
+    font-weight: bolder;
+    font-size: 1.3rem;
+    background: #e7700d;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    transform: skew(-20deg);
+    line-height: 1.8rem;
+
+}
+
+.gen-team .available {
+    color: whitesmoke;
+    background: none;
+}
+
+
+.gen-team p {
+    max-width: 580px;
+    margin-bottom: 50px;
+    color: rgb(215, 215, 215);
+}
+
+.gen-team a {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-right: 10px;
+    color: whitesmoke;
+}
+
+.supercharge-teams {
+    color: #d5cfcf;
+    background: #e7700d;
+    height: 38px;
+    width: 220px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 1;
+
+}
+
+.supercharge-teams::after {
+    content: " >";
+}
+
+.home-overflow {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.home-overflow img {
+    margin: 40px 30px 5px 40px;
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    box-shadow: 5px 0 10px 5px;
+
+}
+
+.advertise {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px 0px;
+}
+
+.advertise-team,
+.api {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    width: 100%;
+}
+
+.advertise-logo,
+.api-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #030303;
+}
+
+.api span {
+    font-weight: bold;
+    font-size: 30px;
+    color: #e7700d;
+}
+.api .api-solution {
+    margin: 0 0 30px 0;
+}
+
+.advertise-team span {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.advertise-team img,
+.api img,
+.career-text img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.advertise-solution,
+.build-brand {
+    display: inline-block;
+    margin: 0 10px 30px 0;
+}
+
+.advertise-solution {
+    color: white;
+    background: #1B75D0;
+    height: 38px;
+    padding: 5px;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.build-brand {
+    color: #1B75D0;
+    font-weight: 200;
+}
+
+
+.career {
+    overflow: hidden;
+}
+
+.career h1 {
+    margin-bottom: 50px;
+    color: rgb(90, 89, 88);
+}
+
+
+.career-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: whitesmoke;
-    padding: 40px;
+    position: relative;
+    background: rgb(247, 244, 244);
     border-radius: 10px;
+    min-height: 100px;
+    margin-bottom: 100px;
+}
+
+.career-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.career-text {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.career-text .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.career-text img {
+    margin-right: 10px;
+}
+
+.career-text p,
+.career-text .career-link {
+    margin-top: 10px;
+}
+
+.career-text .career-link,
+.api-solution {
+    padding: 8px 16px;
+    background-color: #1B75D0;
+    color: white;
+    width: fit-content;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.career-image {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+}
+
+.career-image img {
+    width: 100%;
+    margin: 0 50px 0 0;
+    position: absolute;
+    transform: translateY(-63%);
+    height: 340px;
+}
+
+.career-text a {
+    font-size: 1.3rem;
+    font-weight: 200;
+    line-height: 1.3;
+    color: #5f5f5f;
+}
+
+.career-container span {
+    color: #030303;
+    font-weight: bold;
+    margin-left: 5px;
 }
