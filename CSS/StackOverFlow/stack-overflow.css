@@ -432,7 +432,7 @@ main {
 .advertise-team,
 .api {
     flex: 1;
-    background: white;
+    background: #fdfafa;
     padding: 20px;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.1);
