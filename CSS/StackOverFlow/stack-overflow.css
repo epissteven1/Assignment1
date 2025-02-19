@@ -26,6 +26,10 @@ header img {
     gap: 15px;
     padding: 10px 12px;
     list-style: none;
+    cursor: pointer;
+}
+.nav ul:active {
+    color: #d5cfcf;
 }
 
 form {
@@ -48,6 +52,7 @@ input[type=search] {
     width: 70px;
     border: 2px solid #1B75D0;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .btn-login {
@@ -127,7 +132,6 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 5px;
-
 }
 
 .content-container {
@@ -480,7 +484,7 @@ main {
     display: inline-block;
     margin: 0 10px 30px 0;
 }
-
+/* helo */
 .advertise-solution {
     color: white;
     background: #1B75D0;
