@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification System</title>
+    <style>
+        body {
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .notification-container {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .notification {
+            background-color: #a1e1f9;
+            border: 1px solid #a7eff7;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 8px;
+            color: red;
+            right: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="showNotificationBtn">Show Notification</button>
+    <section class="notification-container" id="notificationContainer">
+    </section>
+
+
+    <script>
+        // Function to create a new notification
+        function createNotification() {
+            const notificationContainer = document.getElementById('notificationContainer');
+
+            // Create notification element
+            const notification = document.createElement('section');
+            notification.className = 'notification';
+            notification.innerHTML = `<span>You have a new message!</span>
+    <button class="close-btn" onclick="this.parentElement.style.display='none';">&times;</button>`;
+
+            // Append the notification to the container
+            notificationContainer.appendChild(notification);
+        }
+
+        // Add event listener to the button
+        document.getElementById('showNotificationBtn').addEventListener('click', createNotification);
+    </script>
+</body>
+
+</html>

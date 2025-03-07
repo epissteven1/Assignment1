@@ -1,4 +1,11 @@
-// Define the warrior objects
+
+/**
+ *  {Object} Warrior
+ * {string} name - The name of the warrior.
+ * {number} hp - The health points of the warrior.
+ * {number} strength - The strength of the warrior, used to calculate attack damage.
+ * {function(): number} attack - Function to simulate an attack, returning the damage dealt.
+ */
 const thor = {
     name: 'Thor',
     hp: 100,
@@ -7,7 +14,6 @@ const thor = {
         return Math.floor(Math.random() * this.strength);
     }
 };
-
 const zeus = {
     name: 'Zeus',
     hp: 100,
@@ -16,8 +22,10 @@ const zeus = {
         return Math.floor(Math.random() * this.strength);
     }
 };
-
-// Function to simulate the battle
+/**
+ * Simulates a battle between two warriors, Thor and Zeus, over 10 rounds.
+ * Logs the result of each round and determines the winner based on remaining health points.
+ */
 function battle() {
     for (let round = 1; round <= 10; round++) {
         console.log(`=== Round ${round} ===`);
@@ -45,6 +53,7 @@ function battle() {
     } else {
         console.log("It's a draw!");
     }
+
 }
 
 // Start the battle

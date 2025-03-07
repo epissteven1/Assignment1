@@ -1,3 +1,6 @@
+
+
+
 // Step 1: Create a Character Object
 const character = {
     name: "Hero",

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <main>
+        <h1>My To-Do List</h1>
+        <form>
+            <label id="addTaskBtn">Add Task</label>
+            <input type="text" class="add" id="taskInput" placeholder="Enter your task here..">
+        </form>
+
+        <section id="taskList" class="task">
+        </section>
+        <section id="notification" class="notification"></section>
+
+    </main>
+
+    <script>
+        document.getElementById('addTaskBtn').addEventListener('click', addTask);
+        document.getElementById('taskInput').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                addTask();
+            }
+        });
+
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskText = taskInput.value.trim();
+
+            if (taskText === '') {
+                showNotification('Task cannot be empty', true);
+                return;
+            }
+
+            const li = document.createElement('li');
+            li.className = 'task';
+            li.style.display = 'flex';
+            li.style.justifyContent = 'space-between';
+            li.style.alignItems = 'center';
+            li.innerHTML = `
+                    <span>${taskText}</span>
+                    <div>
+                        <button style="border:1px solid black; background:red; width:100px; height: 30px; border-radius: 5px;color:whitesmoke;" onclick="removeTask(this)">Remove</button>
+                        <button style="border:1px solid black; background:green; width:100px; height: 30px; border-radius: 5px; color:whitesmoke;" onclick="toggleCompleted(this)">Completed</button>
+                    </div>
+                `;
+
+            document.getElementById('taskList').appendChild(li);
+            taskInput.value = '';
+            showNotification(`Task added: ${taskText}`);
+        }
+
+        function removeTask(button) {
+            const task = button.parentElement.parentElement;
+            const taskText = task.querySelector('span').innerText;
+            task.remove();
+            showNotification(`Task removed: ${taskText}`);
+        }
+
+        function toggleCompleted(button) {
+            const task = button.parentElement.parentElement;
+            task.querySelector('span').classList.toggle('completed');
+        }
+
+        function showNotification(message, isError = false) {
+            const notification = document.getElementById('notification');
+            notification.innerText = message;
+            notification.style.backgroundColor = isError ? '#f44336' : '#4caf50';
+            notification.style.display = 'block';
+
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>
