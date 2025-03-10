@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+section {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #1f1e1e;
+    border-radius: 5px;
+
+}
+
+.balance {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feedback {
+    margin-top: 10px;
+    color: red;
+}
+
+.history {
+    margin-top: 20px;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history li {
+    margin: 0 20px 5px 40px;
+    text-align: left;
+    background: rgb(243, 241, 241);
+    font-size: 1.2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+form input {
+    width: 90%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+section {
+    text-align: center;
+}
+
+button {
+    margin: 5px;
+    width: 100px;
+    height: 40px;
+}

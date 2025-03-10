@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefly Challenge</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .bee-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .bee {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Catch the Bee's</h1>
+    <div class="bee-container">
+
+        <div class="bee" id="bee-1"></div>
+        <div class="bee" id="bee-2"></div>
+        <div class="bee" id="bee-3"></div>
+        <div class="bee" id="bee-4"></div>
+    </div>
+
+    <script>
+        // Load Lottie animations for each bee
+        for (let i = 1; i <= 4; i++) {
+            lottie.loadAnimation({
+                container: document.getElementById('bee-' + i),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: './assets/bee.json'
+            });
+        }
+
+        // Click effect for each bee
+        document.querySelectorAll('.bee').forEach(bee => {
+            bee.addEventListener('click', function () {
+                this.style.transform = 'scale(0.5)';
+                this.style.opacity = '0';
+
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    this.style.opacity = '1';
+                }, 1000);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

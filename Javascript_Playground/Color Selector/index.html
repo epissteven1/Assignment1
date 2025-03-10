@@ -1,0 +1,88 @@
+<!-- (When you click a color button with `event.stopPropagation()` commented out, both the button's click event and the container's click event are triggered. This results in two alerts: one for the button click and one for the container click.
+)
+When you uncomment `event.stopPropagation();` inside the button click handler and click a color button again, only the button's click event is triggered, and the container's click event is not triggered. This results in only one alert for the button click.
+
+`event.stopPropagation()` is useful in this example because it prevents the click event from bubbling up to the container. This ensures that only the button's click event is handled, and the container's click event is not triggered when a button is clicked. This allows for more precise control over event handling. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #container {
+            width: 300px;
+            height: 200px;
+            background-color: lightgray;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .color-box {
+            width: 100px;
+            height: 40px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Color Selector</h1>
+    <p>Click a color to change the background.</p>
+    <div id="container">
+        <button class="color-box red">Red</button>
+        <button class="color-box blue">Blue</button>
+        <button class="color-box green">Green</button>
+    </div>
+
+    <script>
+        document.getElementById("container").addEventListener("click", function () {
+            alert("You clicked the container!");
+
+            // "this" refers to the element that triggered the event (in this case, 				#container)
+            this.style.backgroundColor = "lightgray";
+        });
+
+        document.querySelectorAll(".color-box").forEach(button => {
+            button.addEventListener("click", function (event) {
+                // event.stopPropagation(); // Uncomment this to see the difference
+                document.getElementById("container").style.backgroundColor = this.style.backgroundColor;
+                alert("You clicked the " + this.textContent + " button!");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

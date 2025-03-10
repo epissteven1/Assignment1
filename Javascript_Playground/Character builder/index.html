@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Character Builder</title>
+</head>
+
+<body>
+    <h1>Character Builder</h1>
+    <section>
+        <img id="helmet" src="./assets/Arctic_Hood.png" alt="Helmet">
+        <img id="armor" src="./assets/Arctic_Jacket.png" alt="Armor">
+        <img id="leggings" src="./assets/Arctic_Leggings.png" alt="Leggings">
+        <img id="boots" src="./assets/Arctic_Boots.png" alt="Boots">
+    </section>
+
+    <ul>
+        <li class="armor-options" id="helmet-options">
+            <img src="./assets/Ironwood_Helmet.png" data-part="helmet">
+            <img src="./assets/Yeti_Horned_Helm.png" data-part="helmet">
+        </li>
+        <li class="armor-options" id="armor-options">
+            <img src="./assets/Ironwood_Chestplate.png" data-part="armor">
+            <img src="./assets/Yeti_Jacket.png" data-part="armor">
+        </li>
+        <li class="armor-options" id="leggings-options">
+            <img src="./assets/Ironwood_Leggings.png" data-part="leggings">
+            <img src="./assets/Yeti_Leggings.png" data-part="leggings">
+        </li>
+        <li class="armor-options" id="boots-options">
+            <img src="./assets/Ironwood_Boots.png" data-part="boots">
+            <img src="./assets/Yeti_Boots.png" data-part="boots">
+        </li>
+    </ul>
+
+    <script>
+        document.querySelectorAll(".armor-options img").forEach(img => {
+            img.addEventListener("click", function () {
+                const part = this.getAttribute("data-part");
+                const selectedImg = document.getElementById(part);
+                selectedImg.src = this.src;
+
+                document.querySelectorAll(`[data-part="${part}"]`).forEach(img => {
+                    img.classList.remove("selected");
+                });
+                this.classList.add("selected");
+            });
+        });
+    </script>
+</body>
+
+</html>
